@@ -4,9 +4,9 @@ Project Cruise is a luxury cruise line designed exclusively for magical creature
 
 ## Team Members
 
-- Project Manager:
-- Scrum Master:
-- Worker:
+- Project Manager: Malik
+- Scrum Master: Tristan
+- Worker: Ethan
 - Worker:
 
 ## Website
