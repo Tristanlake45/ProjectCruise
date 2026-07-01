@@ -3,25 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Project Cruise</title>
-
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/components.js" defer></script>
-    <script src="js/main.js" defer></script>
+    <title>Contact — Project Cruise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cruise.css">
 </head>
 <body>
 
-<div id="nav-placeholder"></div>
+    <header class="nav">
+        <div class="wrap nav-inner">
+            <a class="brand" href="index.html">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+                    <circle cx="13" cy="13" r="12" stroke="#C18F4A" stroke-width="1.4" />
+                    <path d="M3 16h20" stroke="#14808C" stroke-width="1.4" />
+                    <path d="M13 5v8M13 5l5 4M13 5l-5 4" stroke="#0B2230" stroke-width="1.4" stroke-linejoin="round" />
+                </svg>
+                Project Cruise
+            </a>
+            <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="navlinks">
+                <a href="cruises.html">Voyages</a>
+                <a href="destinations.html">Realms</a>
+                <a href="about.html">The Accord</a>
+                <a href="contact.html">Contact</a>
+                <a class="btn btn-primary" href="booking.html">Book a crossing</a>
+            </nav>
+        </div>
+    </header>
 
-<main id="content">
+    <section class="page-hero">
+        <div class="wrap">
+            <span class="eyebrow" style="color:#7fd6cf">Envoys &amp; enquiries</span>
+            <h1>Speak with the harbour chancery.</h1>
+            <p>Questions about a crossing, an accommodation for your species, or verification before you sail — send word and an envoy replies within one day.</p>
+        </div>
+    </section>
 
-    <h2>About Us</h2>
+    <section class="contact">
+        <div class="wrap contact-grid">
+            <!-- FORM -->
+            <div>
+                <div class="success" id="success" role="status" aria-live="polite">
+                    <strong>Word received.</strong> Thank you — an envoy will reply to the address you gave within one day, neutral time.
+                </div>
+                <form id="contactForm" novalidate>
+                    <div class="row2">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" autocomplete="name" required placeholder="Envoy Aeliria of Sylvangarde">
+                        </div>
+                        <div class="field">
+                            <label for="email">Sending address</label>
+                            <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@realm.example">
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="field">
+                            <label for="realm">Realm &amp; nature</label>
+                            <input id="realm" name="realm" type="text" placeholder="Nocturne · vampire">
+                        </div>
+                        <div class="field">
+                            <label for="subject">What's this about?</label>
+                            <input id="subject" name="subject" type="text" placeholder="The Twilight Circuit — Nocturne departure">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="message">Your message</label>
+                        <textarea id="message" name="message" required placeholder="Tell us your party size, any dates in mind, and any accommodations your kind requires."></textarea>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+                        <button class="btn btn-brass" type="submit">Send message</button>
+                        <span class="form-note">We'll only use your details to reply and to ready your cabin.</span>
+                    </div>
+                </form>
+            </div>
 
-    <p>Content coming soon.</p>
+            <!-- DETAILS -->
+            <aside class="details">
+                <h2>Reach the chancery</h2>
+                <div class="detail">
+                    <div class="ic">✉</div>
+                    <div><div class="lab">By letter</div><div class="val"><a href="mailto:hello@projectcruise.example">hello@projectcruise.example</a></div></div>
+                </div>
+                <div class="detail">
+                    <div class="ic">☎</div>
+                    <div><div class="lab">By hail</div><div class="val"><a href="tel:+16055550199">+1 (605) 555-0199</a></div></div>
+                </div>
+                <div class="detail">
+                    <div class="ic">⚓</div>
+                    <div><div class="lab">Home port</div><div class="val">Pier of Accord<br>Neutral Waters, off Tidewrend</div></div>
+                </div>
+                <div class="detail">
+                    <div class="ic">◈</div>
+                    <div><div class="lab">Verification desk</div><div class="val">Open at every port of call</div></div>
+                </div>
+                <div class="hours">
+                    <div><span>Landward days</span><span>08:00 – 18:00</span></div>
+                    <div><span>Twilight hours</span><span>by request</span></div>
+                    <div><span>High holy tides</span><span>Closed</span></div>
+                </div>
+            </aside>
+        </div>
+    </section>
 
-</main>
+    <footer>
+        <div class="wrap">
+            <div class="foot-grid">
+                <div style="max-width:260px">
+                    <div class="foot-brand">
+                        <svg width="22" height="22" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+                            <circle cx="13" cy="13" r="12" stroke="#C18F4A" stroke-width="1.4" />
+                            <path d="M3 16h20" stroke="#14808C" stroke-width="1.4" />
+                            <path d="M13 5v8M13 5l5 4M13 5l-5 4" stroke="#fff" stroke-width="1.4" stroke-linejoin="round" />
+                        </svg>
+                        Project Cruise
+                    </div>
+                    <p style="font-size:.9rem">A neutral ship between realms — sailing for tourism, and for peace.</p>
+                </div>
+                <div class="foot-col">
+                    <h4>Explore</h4>
+                    <a href="cruises.html">Voyages</a>
+                    <a href="destinations.html">Realms</a>
+                    <a href="booking.html">Book a crossing</a>
+                </div>
+                <div class="foot-col">
+                    <h4>The Accord</h4>
+                    <a href="about.html">About us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="foot-col">
+                    <h4>Get in touch</h4>
+                    <a href="mailto:hello@projectcruise.example">hello@projectcruise.example</a>
+                    <a href="tel:+16055550199">+1 (605) 555-0199</a>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <span>© 2026 Project Cruise · a student project</span>
+                <span>Chartered by the Inter-Realm Commerce Council</span>
+            </div>
+        </div>
+    </footer>
 
-<div id="footer-placeholder"></div>
+    <script>
+        document.querySelectorAll('#navlinks a').forEach(a => a.addEventListener('click', () => document.getElementById('navlinks').classList.remove('open')));
 
+        const form = document.getElementById('contactForm');
+        const success = document.getElementById('success');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            const message = form.message.value.trim();
+            const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            if (!name || !emailOk || !message) {
+                alert('Please add your name, a valid sending address, and a message so we can reply.');
+                return;
+            }
+            success.classList.add('show');
+            form.reset();
+            success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    </script>
 </body>
 </html>
