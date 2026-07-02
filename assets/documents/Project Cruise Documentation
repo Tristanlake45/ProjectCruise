@@ -1,0 +1,56 @@
+# Project Cruise — Project Documentation
+
+**Course:** CIS · Scrum group project
+**Team:** Malik Machaieie (Project Manager), Tristan Lake (Scrum Master), Ethan Diaz (Developer)
+**Stakeholder:** Maria (Inter-Realm Commerce Council)
+
+---
+
+## 1. Overview
+Project Cruise is a website for a cruise line that operates between magical realms. Unlike an ordinary cruise, its purpose is twofold: promote tourism between civilizations and serve as **neutral diplomatic ground** where rival realms can meet and talk. The site presents voyages, destinations, species-specific accommodations, a verified booking process, and the rules that govern the ship.
+
+## 2. The stakeholder brief and how we interpreted it
+We gathered requirements by interviewing the stakeholder. Her answers reframed the project from "a fun cruise" to a **diplomacy-and-tourism venture**, and defined how success is measured:
+
+- **Primary objective:** encourage tourism and strengthen diplomacy between realms.
+- **Success measure:** fewer unregulated wars, lower tensions, fewer deaths overall.
+- **Differentiator:** a neutral space where everyone is relaxed and can actually communicate.
+
+Our interpretation: the site must *lead* with neutrality and diplomacy, not just vacation appeal — and the product features (verification, accommodations, rules) must visibly support that mission.
+
+## 3. Hidden criteria — what we uncovered and how the site addresses each
+The stakeholder held back several "hidden" requirements. We surfaced them through the interview and built the site to meet them:
+
+| Requirement (from stakeholder) | How the site addresses it |
+|---|---|
+| Neutral space for tourism + diplomacy | Homepage and About lead with the neutral-ground concept; framing throughout |
+| Success = less conflict between realms | Messaging positions the ship as a place rivals can "sit down easy" |
+| Guests must be verified as genuine fantastical creatures | **Veil Lens** verification step in `booking.html`, at booking and gangway |
+| Rules/jurisdiction | The **Accord**: at sea the ship's own charter applies; within a realm's waters, that realm's law applies (stated on About) |
+| Species-specific accommodations, with logic | Species selection at booking + accommodations that follow clear logic (e.g. vampires → sunless cabins; merfolk → saltwater berths; emberkin → heat-rated staterooms) |
+| Model standard cruise information | Voyages with itineraries, cabin types, pricing, included amenities, and an FAQ mirroring real cruise sites |
+| Must be/become profitable | All-inclusive fares in crowns (◈); revenue from premium species-tier cabins, diplomatic charters, and repeat tourism |
+
+## 4. Scrum process and roles
+The project ran under a Scrum structure with strict role separation:
+
+- **Project Manager — Malik Machaieie:** broke the work into tasks, delegated pages, maintained the written task record, gathered requirements, and produced site copy, the FAQ, the world/consistency notes, the presentation script, and this documentation. Managed the project remotely while travelling.
+- **Scrum Master — Tristan:** the sole communicator with the stakeholder; coordinated the interview and relayed requirements to the team.
+- **Developer — Tristan Lake:** scaffolded the repository, built `cruises.html` and `booking.html` (including the verification and species-selection flow), unified the stylesheet, and refactored shared nav/footer components.
+- **Developer — Ethan Diaz:** built `destinations.html` and `about.html`, and sourced and placed image assets.
+
+Task ownership and status were tracked in a shared PM log throughout the sprint. A shared "world notes" document kept realm names, species rules, and terminology consistent across every page.
+
+## 5. Business model (profitability)
+One all-inclusive fare covers the cabin, meals suited to a guest's nature, port calls, and verification. Profit is designed to come from three sources: premium species-tier accommodations, diplomatic charters (realms paying to host talks aboard), and repeat tourism as trust in the neutral ship grows.
+
+## 6. Tools and workflow
+- **GitHub** — version control and collaboration; each member committed their own work.
+- **Microsoft Teams** — team coordination and stakeholder-relayed communication.
+- **Visual Studio / VS Code** — development.
+- **HTML / CSS / JavaScript** — the site itself, with shared components loaded via JavaScript.
+
+## 7. Deliverables
+- Completed multi-page website (see README for structure)
+- Group video presentation (all members presenting)
+- This documentation and the maintained Scrum task record
