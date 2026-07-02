@@ -3,25 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Project Cruise</title>
-
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Voyages — Project Cruise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cruise.css">
     <script src="js/components.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
 <body>
+    <div id="nav-placeholder"></div>
 
-<div id="nav-placeholder"></div>
+    <main>
+        <section class="page-hero">
+            <div class="wrap">
+                <span class="eyebrow">Sailing this season</span>
+                <h1>Choose a crossing between realms.</h1>
+                <p>Every voyage is all-inclusive: cabin, meals to your nature, port calls, and Veil Lens verification are included in the fare.</p>
+            </div>
+        </section>
 
-<main id="content">
+        <section class="content-section">
+            <div class="wrap voyage-list">
+                <article class="voyage-detail reveal">
+                    <div class="voyage-main">
+                        <span class="eyebrow">7 nights · from ◈1,290</span>
+                        <h2>The Concord Passage</h2>
+                        <p class="route">Sylvangarde → Tidewrend → Duskmere → Emberreach</p>
+                        <p>A forest-to-fire route designed for envoys, merchants, and travelers who want neutral stops between historically tense realms.</p>
+                        <div class="chips"><span class="chip">Diplomacy lounges</span><span class="chip">Trade tables</span><span class="chip">Garden & flame dining</span></div>
+                    </div>
+                    <aside class="fare-card">
+                        <h3>Cabin tiers</h3>
+                        <p>Accord Interior · included</p>
+                        <p>Species-Tier Suite · +◈340</p>
+                        <p>Envoy Charter Room · +◈710</p>
+                        <a class="btn btn-brass" href="booking.html">Book this voyage</a>
+                    </aside>
+                </article>
 
-    <h2>About Us</h2>
+                <article class="voyage-detail reveal">
+                    <div class="voyage-main">
+                        <span class="eyebrow">5 nights · from ◈960</span>
+                        <h2>The Twilight Circuit</h2>
+                        <p class="route">Nocturne → the Umbral Deep → Duskmere → Nocturne</p>
+                        <p>A night-forward itinerary with sunless scheduling, perfect for vampires, shades, nightkin, and curious guests traveling under controlled light.</p>
+                        <div class="chips"><span class="chip">Sunless cabins</span><span class="chip">Night dining</span><span class="chip">Crimson cellar</span></div>
+                    </div>
+                    <aside class="fare-card">
+                        <h3>Cabin tiers</h3>
+                        <p>Duskward Interior · included</p>
+                        <p>Crimson Suite · +◈280</p>
+                        <p>Private Night Salon · +◈620</p>
+                        <a class="btn btn-brass" href="booking.html">Book this voyage</a>
+                    </aside>
+                </article>
 
-    <p>Content coming soon.</p>
+                <article class="voyage-detail reveal">
+                    <div class="voyage-main">
+                        <span class="eyebrow">9 nights · from ◈1,870</span>
+                        <h2>The Aetherline</h2>
+                        <p class="route">Skyhold → Aetheris → Tidewrend → Frosthelm</p>
+                        <p>A high-altitude-to-frozen-north crossing for guests who need open-air perches, chilled quarters, or extended port calls.</p>
+                        <div class="chips"><span class="chip">Perch cabins</span><span class="chip">Cold suites</span><span class="chip">Sky-port calls</span></div>
+                    </div>
+                    <aside class="fare-card">
+                        <h3>Cabin tiers</h3>
+                        <p>Accord Interior · included</p>
+                        <p>Perch or Frost Suite · +◈420</p>
+                        <p>High Envoy Deck · +◈890</p>
+                        <a class="btn btn-brass" href="booking.html">Book this voyage</a>
+                    </aside>
+                </article>
+            </div>
+        </section>
 
-</main>
+        <section class="content-section alt">
+            <div class="wrap">
+                <div class="sec-head reveal">
+                    <div>
+                        <span class="eyebrow">Included with every fare</span>
+                        <h2>What guests receive</h2>
+                    </div>
+                    <p>No hidden fees. The fare is built to avoid mistrust before the voyage even begins.</p>
+                </div>
+                <div class="card-grid four">
+                    <div class="info-card"><h3>Cabin</h3><p>A safe berth suited to your selected species needs.</p></div>
+                    <div class="info-card"><h3>Meals</h3><p>Dining matched to your nature, from nectar tables to crimson service.</p></div>
+                    <div class="info-card"><h3>Port calls</h3><p>Guided stops under local laws and Accord protections.</p></div>
+                    <div class="info-card"><h3>Verification</h3><p>Veil Lens screening at booking and again at boarding.</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<div id="footer-placeholder"></div>
-
+    <div id="footer-placeholder"></div>
 </body>
 </html>

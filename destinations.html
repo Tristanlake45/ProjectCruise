@@ -1,396 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Realms — Project Cruise</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/cruise.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realms — Project Cruise</title>
 
-    <body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/cruise.css">
+    <script src="js/components.js" defer></script>
+</head>
 
-        <!-- NAV -->
-        <header class="nav">
-            <div class="wrap nav-inner">
-                <a class="brand" href="index.html">
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-                        <circle cx="13" cy="13" r="12"
-                        stroke="#C18F4A"
-                        stroke-width="1.4"/>
+<body>
 
-                        <path d="M3 16h20"
-                        stroke="#14808C"
-                        stroke-width="1.4"/>
+    <div id="nav-placeholder"></div>
 
-                        <path d="M13 5v8M13 5l5 4M13 5l-5 4"
-                        stroke="#0B2230"
-                        stroke-width="1.4"
-                        stroke-linejoin="round"/>
-                    </svg>
-                Project Cruise
-                </a>
-                <button class="nav-toggle"
-                    onclick="document.getElementById('navlinks').classList.toggle('open')">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+    <section class="page-hero">
+        <div class="wrap">
+            <span class="eyebrow" style="color:#7fd6cf">Ports of call</span>
 
-                <nav class="nav-links" id="navlinks">
+            <h1>Realms beyond the horizon.</h1>
 
-                    <a href="cruises.html">Voyages</a>
-
-                    <a href="destinations.html">Realms</a>
-
-                    <a href="about.html">The Accord</a>
-
-                    <a href="contact.html">Contact</a>
-
-                    <a class="btn btn-primary" href="booking.html">
-                    Book a crossing
-                    </a>
-
-                </nav>
-
-            </div>
-
-        </header>
-
-        <!-- HERO -->
-
-        <section class="page-hero">
-            <div class="wrap">
-                <span class="eyebrow" style="color:#7fd6cf">
-                    Ports of call
-                </span>
-
-                <h1>Realms beyond the horizon.</h1>
-
-                <p>
-                    Each destination offers a different culture,
-                    landscape, and people. Every port welcomes guests
-                    under the Accord.
-                </p>
-                <br>
-            </div>
-        </section>
-
-
-        <section class="destinations">
-            <div class="wrap">
-                <article class="destination-card">
-                    <img src="images/destinations/sylvangarde-forest.jpg" alt="Sylvangarde forest">
-
-                    <div class="destination-info">
-
-                        <span class="eyebrow">
-                            Forest Realm
-                        </span>
-
-                        <h2>Sylvangarde</h2>
-
-                        <p>
-                            A vast living forest where ancient trees,
-                            magic, and nature exist together.
-                        </p>
-                        <p>
-                            Home to:
-                            <strong>Dryads, fae, and beastfolk</strong>
-                        </p>
-                        <div class="chips">
-                            <span class="chip">Living forest</span>
-                            <span class="chip">Nature magic</span>
-                        </div>
-                    </div>
-                </article>
-
-
-
-                <article class="destination-card reverse">
-                    <img src="images/destinations/emerreach-coast.jpg" alt="Emberreach volcano">
-                    <div class="destination-info">
-                        <span class="eyebrow">
-                            Fire Realm
-                        </span>
-                        <h2>Emberreach</h2>
-                        <p>
-                            Obsidian shores and volcanic landscapes
-                            shaped by heat and flame.
-                        </p>
-                        <p>
-                            Home to:
-                            <strong>Emberkin and dragonkin</strong>
-                        </p>
-                        <div class="chips">
-                            <span class="chip">Volcanic coast</span>
-                            <span class="chip">Fire culture</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="destination-card">
-                    <img src="images/destinations/nocturne-umbral-deep.jpg" alt="Nocturne realm">
-                    <div class="destination-info">
-                        <span class="eyebrow">
-                            Night Realm
-                        </span>
-                        <h2>Nocturne</h2>
-                        <p>
-                            The Umbral Deep, a realm of endless night
-                            beneath the stars.
-                        </p>
-                        <p>
-                            Home to:
-                            <strong>Vampires, nightkin, shades</strong>
-                        </p>
-                        <div class="chips">
-                            <span class="chip">Night realm</span>
-                            <span class="chip">Twilight ports</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="destination-card reverse">
-                    <img src="images/destinations/tidewrend-underwater.jpg" alt="Water realm">
-                    <div class="destination-info">
-                        <span class="eyebrow">
-                            Water Realm
-                        </span>
-                        <h2>Tidewrend</h2>
-                        <p>
-                            A coastal and underwater civilization connected 
-                            by ocean currents.
-                        </p>
-                        <p>
-                            Home to:
-                            <strong>Merfolk, naiads, and sirens</strong>
-                        </p>
-                        <div class="chips">
-                            <span class="chip">Ocean Life</span>
-                            <span class="chip">Underwater cities</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="destination-card">
-                    <img src="images/destinations/skyhold-aetheris-islands.jpg" alt="Sky Realm">
-                    <div class="destination-info">
-                        <span class="eyebrow">
-                            Sky Realm
-                        </span>
-                        <h2>Skyhold / Aetheris</h2>
-                        <p>
-                            Floating islands above the clouds where sky 
-                            routes connect distant realms.
-                        </p>
-                        <p>
-                            Home to:
-                            <strong>Griffonkin and Storm-callers</strong>
-                        </p>
-                        <div class="chips">
-                            <span class="chip">Sky islands</span>
-                            <span class="chip">Open air</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="destination-card reverse">
-                    <img src="images/destinations/frosthelm-hill.jpg" alt="Frosthelm realm">
-                    <div class="destination-info">
-                        <span class="eyebrow">
-                            Winter Realm
-                        </span>
-                        <h2>Frosthelm</h2>
-                        <p>
-                            The frozen northern realm of glaciers 
-                            and endless winter.
-                        </p>
-                        <p>
-                            Home to:
-                            <strong>Frost-folk and Winter Giants</strong>
-                        </p>
-                        <div class="chips">
-                            <span class="chip">Frozen north</span>
-                            <span class="chip">Ice halls</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="destination-card">
-                    <img src="images/destinations/Duskmere.jpg" alt="Duskmere realm">
-                    <div class="destination-info">
-                        <span class="eyebrow">
-                            Twilight Port
-                        </span>
-                        <h2>Duskmere</h2>
-                        <p>
-                            A twilight port city built as a neutral trade hub. All peoples are welcome here.
-                        </p>
-                        <div class="chips">
-                            <span class="chip">Neutral port</span>
-                            <span class="chip">Shared ground</span>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <section class="why">
-            <div class="wrap">
-                <div class="why-grid">
-                    <div class="why-card reveal">
-
-                        <div class="mark">⚓</div>
-
-                        <h3>
-                        Safe arrivals
-                        </h3>
-
-                        <p>
-                        Every port follows Project Cruise procedures so travelers know what to expect before stepping ashore.
-                        </p>
-
-                    </div>
-
-                    <div class="why-card reveal">
-
-                        <div class="mark">⚖</div>
-
-                        <h3>
-                        Different worlds, one voyage
-                        </h3>
-
-                        <p>
-                        The ship gives rivals a place to meet outside old borders and discover common ground.
-                        </p>
-
-                    </div>
-
-                    <div class="why-card reveal">
-
-                        <div class="mark">◈</div>
-
-                        <h3>
-                        Built for every nature
-                        </h3>
-
-                        <p>
-                        Cabins, meals, and services are prepared around each species' needs.
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-
-        <section style="padding-top:1rem">
-
-            <div class="wrap">
-
-                <div class="cta-band reveal">
-
-                    <div>
-
-                        <h2>
-                        Ready to visit another realm?
-                        </h2>
-
-                        <p>
-                        Choose your voyage and begin your crossing under the Accord.
-                        </p>
-
-                    </div>
-
-                    <a class="btn btn-brass" href="booking.html">
-                    Book a crossing
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-
-        <footer>
-            <div class="wrap">
-            <div class="foot-grid">
-            <div style="max-width:260px">
-            <div class="foot-brand">
-            Project Cruise
-            </div>
-            <p style="font-size:.9rem">
-            A neutral ship between realms — sailing for tourism, and for peace.
+            <p>
+                Each destination offers a different culture, landscape, and people.
+                Every port welcomes guests under the Accord.
             </p>
+        </div>
+    </section>
+
+    <section class="destinations">
+        <div class="wrap">
+
+            <article class="destination-card">
+                <img src="images/destinations/sylvangarde-forest.jpg" alt="Sylvangarde forest">
+
+                <div class="destination-info">
+                    <span class="eyebrow">Forest Realm</span>
+
+                    <h2>Sylvangarde</h2>
+
+                    <p>
+                        A vast living forest where ancient trees, magic,
+                        and nature exist together.
+                    </p>
+
+                    <p>
+                        Home to:
+                        <strong>Dryads, fae, and beastfolk</strong>
+                    </p>
+
+                    <div class="chips">
+                        <span class="chip">Living forest</span>
+                        <span class="chip">Nature magic</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-card reverse">
+                <img src="images/destinations/emerreach-coast.jpg" alt="Emberreach volcano">
+
+                <div class="destination-info">
+                    <span class="eyebrow">Fire Realm</span>
+
+                    <h2>Emberreach</h2>
+
+                    <p>
+                        Obsidian shores and volcanic landscapes shaped by heat and flame.
+                    </p>
+
+                    <p>
+                        Home to:
+                        <strong>Emberkin and dragonkin</strong>
+                    </p>
+
+                    <div class="chips">
+                        <span class="chip">Volcanic coast</span>
+                        <span class="chip">Fire culture</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-card">
+                <img src="images/destinations/nocturne-umbral-deep.jpg" alt="Nocturne realm">
+
+                <div class="destination-info">
+                    <span class="eyebrow">Night Realm</span>
+
+                    <h2>Nocturne</h2>
+
+                    <p>
+                        The Umbral Deep, a realm of endless night beneath the stars.
+                    </p>
+
+                    <p>
+                        Home to:
+                        <strong>Vampires, nightkin, and shades</strong>
+                    </p>
+
+                    <div class="chips">
+                        <span class="chip">Night realm</span>
+                        <span class="chip">Twilight ports</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-card reverse">
+                <img src="images/destinations/tidewrend-underwater.jpg" alt="Tidewrend water realm">
+
+                <div class="destination-info">
+                    <span class="eyebrow">Water Realm</span>
+
+                    <h2>Tidewrend</h2>
+
+                    <p>
+                        A coastal and underwater civilization connected by ocean currents.
+                    </p>
+
+                    <p>
+                        Home to:
+                        <strong>Merfolk, naiads, and sirens</strong>
+                    </p>
+
+                    <div class="chips">
+                        <span class="chip">Ocean life</span>
+                        <span class="chip">Underwater cities</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-card">
+                <img src="images/destinations/skyhold-aetheris-islands.jpg" alt="Skyhold and Aetheris islands">
+
+                <div class="destination-info">
+                    <span class="eyebrow">Sky Realm</span>
+
+                    <h2>Skyhold / Aetheris</h2>
+
+                    <p>
+                        Floating islands above the clouds where sky routes connect distant realms.
+                    </p>
+
+                    <p>
+                        Home to:
+                        <strong>Griffonkin and storm-callers</strong>
+                    </p>
+
+                    <div class="chips">
+                        <span class="chip">Sky islands</span>
+                        <span class="chip">Open air</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-card reverse">
+                <img src="images/destinations/frosthelm-hill.jpg" alt="Frosthelm realm">
+
+                <div class="destination-info">
+                    <span class="eyebrow">Winter Realm</span>
+
+                    <h2>Frosthelm</h2>
+
+                    <p>
+                        The frozen northern realm of glaciers and endless winter.
+                    </p>
+
+                    <p>
+                        Home to:
+                        <strong>Frost-folk and winter giants</strong>
+                    </p>
+
+                    <div class="chips">
+                        <span class="chip">Frozen north</span>
+                        <span class="chip">Ice halls</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-card">
+                <img src="images/destinations/Duskmere.jpg" alt="Duskmere realm">
+
+                <div class="destination-info">
+                    <span class="eyebrow">Twilight Port</span>
+
+                    <h2>Duskmere</h2>
+
+                    <p>
+                        A twilight port city built as a neutral trade hub.
+                        All peoples are welcome here.
+                    </p>
+
+                    <p>
+                        Home to:
+                        <strong>Merchants, envoys, travelers, and all peoples</strong>
+                    </p>
+
+                    <div class="chips">
+                        <span class="chip">Neutral port</span>
+                        <span class="chip">Shared ground</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="why">
+        <div class="wrap">
+            <div class="why-grid">
+
+                <div class="why-card reveal">
+                    <div class="mark">⚓</div>
+
+                    <h3>Safe arrivals</h3>
+
+                    <p>
+                        Every port follows Project Cruise procedures so travelers
+                        know what to expect before stepping ashore.
+                    </p>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="mark">⚖</div>
+
+                    <h3>Different worlds, one voyage</h3>
+
+                    <p>
+                        The ship gives rivals a place to meet outside old borders
+                        and discover common ground.
+                    </p>
+                </div>
+
+                <div class="why-card reveal">
+                    <div class="mark">◈</div>
+
+                    <h3>Built for every nature</h3>
+
+                    <p>
+                        Cabins, meals, and services are prepared around each species'
+                        needs.
+                    </p>
+                </div>
 
             </div>
+        </div>
+    </section>
 
-            <div class="foot-col">
+    <section style="padding-top:1rem">
+        <div class="wrap">
+            <div class="cta-band reveal">
+                <div>
+                    <h2>Ready to visit another realm?</h2>
 
-                <h4>Explore</h4>
+                    <p>
+                        Choose your voyage and begin your crossing under the Accord.
+                    </p>
+                </div>
 
-                <a href="cruises.html">Voyages</a>
-
-                <a href="destinations.html">Realms</a>
-
-                <a href="booking.html">Book</a>
-
+                <a class="btn btn-brass" href="booking.html">Book a crossing</a>
             </div>
+        </div>
+    </section>
 
-            <div class="foot-col">
-                <h4>The Accord</h4>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            </div>
-            <div class="foot-bottom">
-            <span>
-            © 2026 Project Cruise · a student project
-            </span>
-            <span>
-            Chartered by the Inter-Realm Commerce Council
-            </span>
-            </div>
-            </div>
-        </footer>
+    <div id="footer-placeholder"></div>
 
-        <script>
+    <script>
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: .15 });
 
-        const io = new IntersectionObserver((entries)=>{
+        document.querySelectorAll('.reveal').forEach(element => io.observe(element));
+    </script>
 
-        entries.forEach(e=>{
-
-        if(e.isIntersecting){
-
-        e.target.classList.add('in');
-
-        io.unobserve(e.target);
-
-        }
-
-        });
-
-        },{threshold:.15});
-
-
-        document.querySelectorAll('.reveal')
-        .forEach(el=>io.observe(el));
-
-
-        document.querySelectorAll('#navlinks a')
-        .forEach(a=>a.addEventListener('click',()=>{
-
-        document.getElementById('navlinks')
-        .classList.remove('open');
-
-        }));
-
-        </script>
-
-    </body>
+</body>
 </html>

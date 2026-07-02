@@ -3,25 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Project Cruise</title>
-
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Book a Crossing — Project Cruise</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cruise.css">
     <script src="js/components.js" defer></script>
+    <script src="js/booking.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
 <body>
+    <div id="nav-placeholder"></div>
 
-<div id="nav-placeholder"></div>
+    <main>
+        <section class="page-hero">
+            <div class="wrap">
+                <span class="eyebrow">Veil Lens required</span>
+                <h1>Book your crossing under the Accord.</h1>
+                <p>Every booking includes a verification step. The Veil Lens confirms your true nature now, then the gangway crew confirms it again before boarding.</p>
+            </div>
+        </section>
 
-<main id="content">
+        <section class="content-section booking-section">
+            <div class="wrap booking-grid">
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-step">
+                        <span class="step-label">Step 1 · Voyage</span>
+                        <h2>Select your route</h2>
+                        <div class="field">
+                            <label for="voyage">Voyage</label>
+                            <select id="voyage" name="voyage" required>
+                                <option value="concord" data-price="1290">The Concord Passage — 7 nights — ◈1,290</option>
+                                <option value="twilight" data-price="960">The Twilight Circuit — 5 nights — ◈960</option>
+                                <option value="aetherline" data-price="1870">The Aetherline — 9 nights — ◈1,870</option>
+                            </select>
+                        </div>
+                        <div class="row2">
+                            <div class="field">
+                                <label for="partySize">Party size</label>
+                                <input id="partySize" name="partySize" type="number" min="1" max="8" value="1" required>
+                            </div>
+                            <div class="field">
+                                <label for="date">Preferred departure</label>
+                                <input id="date" name="date" type="date" required>
+                            </div>
+                        </div>
+                    </div>
 
-    <h2>About Us</h2>
+                    <div class="form-step verified-step">
+                        <span class="step-label">Step 2 · Verification</span>
+                        <h2>Veil Lens screening</h2>
+                        <p>The ICC requires each guest to verify their magical nature before a fare can be held.</p>
+                        <div class="row2">
+                            <div class="field">
+                                <label for="guestName">Lead guest name</label>
+                                <input id="guestName" name="guestName" type="text" placeholder="Envoy Aeliria" required>
+                            </div>
+                            <div class="field">
+                                <label for="realm">Home realm</label>
+                                <input id="realm" name="realm" type="text" placeholder="Sylvangarde" required>
+                            </div>
+                        </div>
+                        <div class="field check-field">
+                            <label>
+                                <input id="veilConfirm" name="veilConfirm" type="checkbox" required>
+                                I understand that the Veil Lens verification happens at booking and again at the gangway.
+                            </label>
+                        </div>
+                    </div>
 
-    <p>Content coming soon.</p>
+                    <div class="form-step">
+                        <span class="step-label">Step 3 · Species accommodation</span>
+                        <h2>Ready the right cabin</h2>
+                        <div class="field">
+                            <label for="species">Guest nature</label>
+                            <select id="species" name="species" required>
+                                <option value="nightkin">Vampire / nightkin — sunless Duskward cabin</option>
+                                <option value="merfolk">Merfolk / naiad — tidal saltwater suite</option>
+                                <option value="dryad">Dryad / fae — living-garden cabin</option>
+                                <option value="emberkin">Emberkin / dragonkin — obsidian heat-rated stateroom</option>
+                                <option value="frostfolk">Frost-folk — chilled below-freezing cabin</option>
+                                <option value="griffonkin">Griffonkin / skyfolk — upper-deck perch cabin</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="tier">Cabin tier</label>
+                            <select id="tier" name="tier" required>
+                                <option value="0">Accord cabin — included</option>
+                                <option value="340">Species-tier suite — +◈340 per guest</option>
+                                <option value="710">Envoy charter room — +◈710 per guest</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="notes">Diet, safety, or diplomatic notes</label>
+                            <textarea id="notes" name="notes" placeholder="Example: night-shifted dining, saltwater berth, open-air access, chilled galley, etc."></textarea>
+                        </div>
+                    </div>
 
-</main>
+                    <button class="btn btn-brass" type="submit">Request crossing</button>
+                    <p class="form-note">This student demo does not process real payments. It simulates a booking request.</p>
+                </form>
 
-<div id="footer-placeholder"></div>
+                <aside class="booking-summary" aria-live="polite">
+                    <span class="eyebrow">Fare summary</span>
+                    <h2 id="summaryVoyage">The Concord Passage</h2>
+                    <div class="summary-row"><span>Base fare</span><strong id="baseFare">◈1,290</strong></div>
+                    <div class="summary-row"><span>Party size</span><strong id="summaryParty">1</strong></div>
+                    <div class="summary-row"><span>Cabin upgrade</span><strong id="upgradeFare">◈0</strong></div>
+                    <div class="summary-row total"><span>Estimated total</span><strong id="totalFare">◈1,290</strong></div>
+                    <div class="verification-card">
+                        <h3>Verification status</h3>
+                        <p id="verificationStatus">Veil Lens confirmation pending.</p>
+                    </div>
+                    <div class="verification-card">
+                        <h3>Prepared accommodation</h3>
+                        <p id="accommodationText">Sunless Duskward cabin with night-shifted service.</p>
+                    </div>
+                    <div class="success" id="bookingSuccess" role="status">
+                        <strong>Crossing requested.</strong> The harbour chancery will review your Veil Lens details and reply within one day.
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
 
+    <div id="footer-placeholder"></div>
 </body>
 </html>
